@@ -1,0 +1,13 @@
+
+class Roti(BaseMenu):
+     def __str__(self):
+        return f"Roti:{self.nama_menu}, Harga: {self._harga}"
+class Aishtea(BaseMenu):
+     def __str__(self):
+        return f"Aishtea:{self.nama_menu}, Harga: {self._harga}"
+class Saguku(BaseMenu):
+     def __str__(self):
+        return f"Saguku:{self.nama_menu}, Harga: {self._harga}"
+class Wang(BaseMenu):
+     def __str__(self):
+        return f"Wang:{self.nama_menu}, Harga: {self._harga}"
