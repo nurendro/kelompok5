@@ -1,13 +1,12 @@
-
 class Roti(BaseMenu):
      def __str__(self):
-        return f"Roti:{self.nama_menu}, Harga: {self._harga}"
+        return f"Roti:{self.nama_menu}, Harga: {self._harga}, Pengantaran : {self._pengantaran}"
 class Aishtea(BaseMenu):
      def __str__(self):
-        return f"Aishtea:{self.nama_menu}, Harga: {self._harga}"
+        return f"Aishtea:{self.nama_menu}, Harga: {self._harga}, Pengantaran : {self._pengantaran}"
 class Saguku(BaseMenu):
      def __str__(self):
-        return f"Saguku:{self.nama_menu}, Harga: {self._harga}"
+        return f"Saguku:{self.nama_menu}, Harga: {self._harga}, Pengantaran : {self._pengantaran}"
 class Wang(BaseMenu):
      def __str__(self):
-        return f"Wang:{self.nama_menu}, Harga: {self._harga}"
+        return f"Wang:{self.nama_menu}, Harga: {self._harga}, Pengantaran : {self._pengantaran}"
