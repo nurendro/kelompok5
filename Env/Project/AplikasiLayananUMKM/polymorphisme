@@ -11,4 +11,4 @@ class Saguku(BaseMenu):
 class Wang(BaseMenu):
      def __str__(self):
         return f"Wang:{self.nama_menu}, Harga: {self._harga}"
-        #tess
+    
