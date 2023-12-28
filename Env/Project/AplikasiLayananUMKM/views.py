@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
 # ICHA ANAWAI_E1E122099
-from .models import Roti, AishTea, Saguku, Wang
+from .models import Roti, AishTea, Saguku, Wang, TelaTela
 # Uzlah merubah import, fungsi, dan queryset Menu menjadi Roti/roti 
 def index(request):
     template = loader.get_template('index.html')
@@ -27,3 +27,6 @@ def saguku(request):
 
 def wang(request):
     return base_details(request, Wang.objects.all(), 'details.html')
+
+def telatela(request):
+    return base_details(request, TelaTela.objects.all(), 'details.html')
