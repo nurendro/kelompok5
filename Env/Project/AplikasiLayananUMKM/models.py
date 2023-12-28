@@ -22,5 +22,32 @@ class AishTea(BaseMenu):
 class Saguku(BaseMenu):
     pass
 
+
 class Wang(BaseMenu):
-    pass
+    @property
+    def harga(self):
+        return self._harga
+
+    def save(self, *args, **kwargs):
+        if self._harga < 0:
+            self._harga = self.__class__.objects.get(pk=self.pk)._harga
+        super().save(*args, **kwargs)
+#  kodingan ini berisi encapsulation yang tujuannya ketika ada admin yang mengisi harga di bawah nol maka tampilannya itu akan terprivate
+        
+class Esteh(BaseMenu):
+    @property
+    def harga(self):
+        return self._harga
+
+    def save(self, *args, **kwargs):
+        if self._harga < 10.000:
+            self._harga = self.__class__.objects.get(pk=self.pk)._harga
+        super().save(*args, **kwargs)
+        #  kodingan ini berisi encapsulation yang tujuannya ketika ada admin yang mengisi harga di bawah Rp 10.000,00 maka tampilannya itu akan terprivate
+
+
+class AyamGeprek(BaseMenu):
+    def __str__(self):
+        return f"AyamGeprek: {self.nama_menu}, Harga: {self.harga}"
+    # kodingan ini merupakan Polymorphism yang tujuannya untuk mengganti perilaku metode str, walaupun tetap sama namun kita memiliki implementasi yang berbeda dengan kelas lainnya
+    
