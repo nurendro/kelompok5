@@ -1,12 +1,13 @@
+#dengan mengganti perilaku __str__, sehingga walaupun dengan metode yang sama kita bisa memiliki implementasi yang berbeda dari kelas induknya
 class Roti(BaseMenu):
      def __str__(self):
-        return f"Roti:{self.nama_menu}, Harga: {self._harga}, Pengantaran : {self._pengantaran}"
+        return f"Roti:{self.nama_menu}, Harga: {self._harga}"
 class Aishtea(BaseMenu):
      def __str__(self):
-        return f"Aishtea:{self.nama_menu}, Harga: {self._harga}, Pengantaran : {self._pengantaran}"
+        return f"Aishtea:{self.nama_menu}, Harga: {self._harga}"
 class Saguku(BaseMenu):
      def __str__(self):
-        return f"Saguku:{self.nama_menu}, Harga: {self._harga}, Pengantaran : {self._pengantaran}"
+        return f"Saguku:{self.nama_menu}, Harga: {self._harga}"
 class Wang(BaseMenu):
      def __str__(self):
-        return f"Wang:{self.nama_menu}, Harga: {self._harga}, Pengantaran : {self._pengantaran}"
+        return f"Wang:{self.nama_menu}, Harga: {self._harga}"

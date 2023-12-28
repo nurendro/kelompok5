@@ -1,5 +1,5 @@
 from django.db import models
-#(3) class dan object
+#Class dan Objek
 class BaseMenu(models.Model):
     nama_menu = models.CharField(max_length=255)
     deskripsi = models.TextField()
@@ -9,10 +9,11 @@ class BaseMenu(models.Model):
     # Laode Ikhwanul Uzlah_E1E122017
     class Meta:
         abstract = True
-#(2) def_str_(self) merupakan fungsi unutuk mempresentasikan kelas nama_menu dari kelas BaseMenu
+#(2) def_str_(self) merupakan fungsi untuk mempresentasikan kelas nama_menu dari kelas BaseMenu
     def __str__(self):
         return f"{self.nama_menu}"
-# (1)dari class Roti, AishTea, Saguku, dan Wang merupakan penerapan dari inheritance yg konsep OOP yang diturunkan sifatnya atau fiturnya dari kelas BaseMenu
+#(1) dari class Roti,AishTea, Saguku, dan Wang merupakan penerapan dari inheritance yg konsep OOP yang diturunkan sifat dan fitur nya dari kelas BaseMenu
+
 class Roti(BaseMenu):
     pass
 class AishTea(BaseMenu):
